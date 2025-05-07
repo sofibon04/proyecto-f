@@ -1,0 +1,42 @@
+/*mixin*/@import "../abstracts/mixin";
+/*variables*/@import "../abstracts/variables";
+/*estilos para mobile*/
+@media (max-width: 768px){
+    /*modificaciones header*/
+    header{
+        @include display(flex);
+        flex-direction: column;
+        img{
+            @include display(none);
+        }
+        .nav-underline{
+            @include flex(center);
+            padding-right: 1px;
+        }
+    }
+    /*modificaciones main*/
+    main{
+        .textos{
+            @include textos;
+            h2{
+                span{
+                    @include display(block);
+                }
+            }
+        }
+        .imagenes{
+            .foto-1{
+                @include display(none);
+            }
+            .foto-3{
+                @include display(none);
+            }
+        }
+        .boton{
+            padding: 25px 20px;
+        }
+    }
+}
+form {
+    padding: 25px 20px;
+  }

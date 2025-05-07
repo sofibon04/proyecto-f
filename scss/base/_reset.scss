@@ -1,0 +1,11 @@
+/*reset*/
+/*import variables*/ @import "../abstracts/variables" ;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*estilos generales*/
+body{
+    background-color: $color-base;
+  }

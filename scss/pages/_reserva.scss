@@ -1,0 +1,54 @@
+/*mixin*/@import "../abstracts/mixin" ;
+/*variables*/@import "../abstracts/variables";
+/*estilos reserva.html*/
+main{
+    .titulo-op{
+        text-align: center;
+        margin: 3%;
+        font-family: $font;
+    }
+    .form-op{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 50px 20px;
+        form{
+             background-color: #f9f9f9;
+             padding: 30px 40px;
+             border-radius: 15px;
+             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+             max-width: 500px;
+             width: 100%;
+             legend{
+                font-size: 1.5rem;
+                margin-bottom: 20px;
+                font-weight: bold;
+                color: #333;
+             }
+             label{
+                margin-bottom: 5px;
+                display: block;
+                color: #333;
+                font-weight: 500;
+             }
+             input{
+                padding: 10px;
+                width: 100%;
+                margin-bottom: 20px;
+                border: 1px solid #ccc;
+                border-radius: 8px;
+                transition: border-color 0.3s ease;
+             }
+             input:focus{
+                border-color: #00acc1;
+                outline: none;
+             }
+        }
+    }
+    p{
+      span{
+         display: block;
+         font-style: italic;
+      } 
+    }
+}

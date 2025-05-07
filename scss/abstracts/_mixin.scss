@@ -1,0 +1,25 @@
+@mixin medidas($height, $widht){
+  height: $height;
+  width: $widht;
+}
+@mixin flex ($contenido-centrado){
+    display: flex;
+    align-items: center;
+    justify-content: $contenido-centrado;
+}
+@mixin padding($padding-t, $padding-b){
+  padding-top: $padding-t;
+  padding-bottom: $padding-b;
+}
+@mixin textos{
+  text-align: center;
+}
+@mixin display($display){
+  display: $display;
+}
+@mixin grid{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 20px;
+  justify-items: center;
+}

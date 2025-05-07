@@ -1,0 +1,111 @@
+/*mixin*/@import "../abstracts/mixin" ;
+/*variables*/@import "../abstracts/variables";
+/*estilos header*/
+header{
+    @include textos ;
+    background-color: $color-principal;
+    color: $color-tipografia;
+    padding: 3px;
+    letter-spacing: 7px;
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+    @include flex(space-between);
+    img{
+        @include medidas(2%,19%);
+    }
+    .titulo{
+        margin-bottom: 20px;
+    }
+    .nav-underline{
+        color: $color-tipografia;
+        letter-spacing: 1px;
+        list-style: none;
+        @include display(flex);
+        gap: 10px;
+        padding-right: 20px;
+
+    }
+}
+/*estilos main*/
+main{
+    @include padding(20px, 0px);
+    color: $color-tipografia;
+    @include display(flex);
+    flex-direction: column;
+    .textos{
+        @include flex(center);
+        h2{
+            padding-top: 20px;
+            font-family: $font;
+            span{
+                display: block;
+                text-align: center;
+                padding-top: 20px;
+                font-family: playfair;    
+            }
+        }
+    }
+    .imagenes{
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin-top: 40px;
+        flex-wrap: wrap;
+        .plato{
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .plato:hover{
+            transform: scale(1.05);
+        }
+        .nombre-plato {
+            position: absolute;
+            bottom: 0;
+            background: rgba(245, 239, 230, 0.85); /* Beige claro semitransparente */
+            width: 100%;
+            text-align: center;
+            font-family: 'Georgia', serif;
+            padding: 10px;
+            font-size: 16px;
+            color: #333;
+          }        
+    }
+    .boton a {
+        @include display(inline-block);
+        justify-content: center;
+        align-items: center;
+        color: #f2f2f2;
+        background-color:rgb(93, 89, 75);
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: 10px 10px 10px rgb(43, 42, 42); 
+        text-decoration: none;       
+    }
+    .boton{
+        @include textos;
+        @include padding(55px,55px);
+        font-family: $font;
+        letter-spacing: 3px;
+        transition: transform 0.3s ease;
+    }
+    .boton:hover{
+        transform: scale(1.05);
+    }
+}
+footer{
+    color: $color-tipografia;
+    @include textos;
+    background-color: $color-principal;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .logo-ig{
+       display: block;
+       margin-bottom: 20px;
+    }
+}

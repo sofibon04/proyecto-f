@@ -1,0 +1,377 @@
+@charset "UTF-8";
+/*import base*/
+/*reset*/
+/*import variables*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*estilos generales*/
+body {
+  background-color: #f5efe6;
+}
+
+/*mixin*/
+/*variables*/
+/*estilos header*/
+header {
+  text-align: center;
+  background-color: #f2f2f2;
+  color: black;
+  padding: 3px;
+  letter-spacing: 7px;
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header img {
+  height: 2%;
+  width: 19%;
+}
+header .titulo {
+  margin-bottom: 20px;
+}
+header .nav-underline {
+  color: black;
+  letter-spacing: 1px;
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  padding-right: 20px;
+}
+
+/*estilos main*/
+main {
+  padding-top: 20px;
+  padding-bottom: 0px;
+  color: black;
+  display: flex;
+  flex-direction: column;
+}
+main .textos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .textos h2 {
+  padding-top: 20px;
+  font-family: playfair;
+}
+main .textos h2 span {
+  display: block;
+  text-align: center;
+  padding-top: 20px;
+  font-family: playfair;
+}
+main .imagenes {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+main .imagenes .plato {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+main .imagenes .plato:hover {
+  transform: scale(1.05);
+}
+main .imagenes .nombre-plato {
+  position: absolute;
+  bottom: 0;
+  background: rgba(245, 239, 230, 0.85); /* Beige claro semitransparente */
+  width: 100%;
+  text-align: center;
+  font-family: "Georgia", serif;
+  padding: 10px;
+  font-size: 16px;
+  color: #333;
+}
+main .boton a {
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  color: #f2f2f2;
+  background-color: rgb(93, 89, 75);
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px rgb(43, 42, 42);
+  text-decoration: none;
+}
+main .boton {
+  text-align: center;
+  padding-top: 55px;
+  padding-bottom: 55px;
+  font-family: playfair;
+  letter-spacing: 3px;
+  transition: transform 0.3s ease;
+}
+main .boton:hover {
+  transform: scale(1.05);
+}
+
+footer {
+  color: black;
+  text-align: center;
+  background-color: #f2f2f2;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+footer .logo-ig {
+  display: block;
+  margin-bottom: 20px;
+}
+
+/*mixin*/
+/*variables*/
+/* estilos menu.html*/
+main {
+  background-color: #f5efe6;
+}
+main .textos-menu {
+  color: black;
+  text-align: center;
+  padding: 20px;
+  font-family: playfair;
+}
+main .textos-menu h2 {
+  padding-bottom: 20px;
+}
+main .textos-menu p span {
+  display: block;
+  padding: 4px;
+  color: brown;
+  font-style: italic;
+  padding: 10px;
+  text-align: center;
+}
+main .texto-promo {
+  display: block;
+  background-color: rgb(209, 213, 212);
+}
+main .imagenes-menu {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding-bottom: 20px;
+}
+main .imagenes-menu img {
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgb(87, 45, 18);
+}
+
+/*mixin*/
+/*variables*/
+/* Estilos para tablet */
+@media (max-width: 1024px) {
+  /*header ajustes*/
+  header {
+    padding: 40px 20px;
+  }
+  header nav ul {
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+  }
+  /*centrado de los textos*/
+  main .textos {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  main .textos h2 {
+    font-size: 22px;
+    line-height: 1.3;
+  }
+  main .imagenes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-items: center;
+    width: 80%;
+    margin: 0 auto;
+    justify-items: center;
+  }
+  main .imagenes div {
+    width: 100%;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(28, 28, 28, 0.2);
+  }
+  main .imagenes img {
+    height: 250px;
+    width: 100%;
+    display: block;
+    object-fit: cover;
+  }
+  main .imagenes .foto-4 {
+    display: block;
+    /* Asegura que se muestre en tablet */
+  }
+  main .boton a {
+    font-size: 18px;
+    padding: 15px 40px;
+  }
+  main .boton {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+/* Pie de página */
+footer {
+  padding: 30px;
+}
+
+/*mixin*/
+/*variables*/
+/*estilos para mobile*/
+@media (max-width: 768px) {
+  /*modificaciones header*/
+  header {
+    display: flex;
+    flex-direction: column;
+  }
+  header img {
+    display: none;
+  }
+  header .nav-underline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 1px;
+  }
+  /*modificaciones main*/
+  main .textos {
+    text-align: center;
+  }
+  main .textos h2 span {
+    display: block;
+  }
+  main .imagenes .foto-1 {
+    display: none;
+  }
+  main .imagenes .foto-3 {
+    display: none;
+  }
+  main .boton {
+    padding: 25px 20px;
+  }
+}
+form {
+  padding: 25px 20px;
+}
+
+/*mixin*/
+/*variables*/
+/*estilos opiniones.html*/
+main .titilo-op {
+  text-align: center;
+  font-style: oblique;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+main .form-op {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 40px;
+}
+main .boton-op {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 50px;
+  padding-bottom: 30px;
+}
+
+/*mixin*/
+/*variables*/
+/*estilos sobre-nosotros.html*/
+main .textos-sn {
+  text-align: center;
+  font-family: playfair;
+}
+main .map-container {
+  position: relative;
+  height: 350px;
+  border-radius: 15px;
+  overflow: hidden;
+  max-width: 800px;
+  margin: 30px auto;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+main .map-container:hover {
+  transform: scale(1.01);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+main .map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 15px;
+}
+
+/*mixin*/
+/*variables*/
+/*estilos reserva.html*/
+main .titulo-op {
+  text-align: center;
+  margin: 3%;
+  font-family: playfair;
+}
+main .form-op {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+}
+main .form-op form {
+  background-color: #f9f9f9;
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  max-width: 500px;
+  width: 100%;
+}
+main .form-op form legend {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #333;
+}
+main .form-op form label {
+  margin-bottom: 5px;
+  display: block;
+  color: #333;
+  font-weight: 500;
+}
+main .form-op form input {
+  padding: 10px;
+  width: 100%;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+}
+main .form-op form input:focus {
+  border-color: #00acc1;
+  outline: none;
+}
+main p span {
+  display: block;
+  font-style: italic;
+}
+
+/*nesting*/
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,19 @@
+/*mixin*/@import "../abstracts/mixin" ;
+/*variables*/@import "../abstracts/variables";
+/*estilos opiniones.html*/
+main{
+    .titilo-op{
+        text-align: center;
+        font-style: oblique;
+        @include padding(50px,50px);
+    }
+    .form-op{
+        @include flex(center);
+        padding-bottom: 40px;
+
+    }
+    .boton-op{
+        @include flex(center);
+        @include padding(50px,30px);
+    }
+}

@@ -1,0 +1,39 @@
+/*mixin*/@import "../abstracts/mixin" ;
+/*variables*/@import "../abstracts/variables";
+/* estilos menu.html*/
+main{
+    background-color: $color-base;
+    .textos-menu{
+        color: $color-tipografia;
+        @include textos;
+        padding: 20px;
+        font-family:  $font;
+        h2{
+            padding-bottom: 20px;
+        }
+        p{
+            span{
+            @include display(block);
+            padding: 4px;
+            color: brown;
+            font-style: italic;
+            padding: 10px;
+            text-align: center;
+            }   
+        }
+    }
+    .texto-promo{
+        display: block;
+        background-color: rgb(209, 213, 212);
+    }
+    .imagenes-menu{
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        padding-bottom: 20px;
+        img{
+            border-radius: 10px;
+            box-shadow: 0 6px 18px rgb(87, 45, 18);
+        }
+    }
+}
